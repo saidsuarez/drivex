@@ -1,0 +1,6 @@
+# Solo se versiona dist/
+/*
+!/dist/
+!/README.md
+!/.gitignore
+.DS_Store

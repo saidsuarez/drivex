@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">DRIVEX — muestras de degradados dorados</title>
+  <desc id="desc">Tres tratamientos digitales de dorado sobre los fondos oscuros oficiales.</desc>
+  <defs>
+    <linearGradient id="gold-satin" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6F4E25"/><stop offset="18%" stop-color="#A97C3C"/>
+      <stop offset="38%" stop-color="#C5A572"/><stop offset="52%" stop-color="#F4E2AD"/>
+      <stop offset="66%" stop-color="#C5A572"/><stop offset="84%" stop-color="#91652D"/>
+      <stop offset="100%" stop-color="#D7B96F"/>
+    </linearGradient>
+    <linearGradient id="gold-polished" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B3A14"/><stop offset="16%" stop-color="#B8863F"/>
+      <stop offset="34%" stop-color="#F8E9B7"/><stop offset="46%" stop-color="#C5A572"/>
+      <stop offset="58%" stop-color="#FFF3C9"/><stop offset="76%" stop-color="#A87530"/>
+      <stop offset="100%" stop-color="#E0C27B"/>
+    </linearGradient>
+    <linearGradient id="gold-foil" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#735021"/><stop offset="12%" stop-color="#D4B368"/>
+      <stop offset="24%" stop-color="#9A6D30"/><stop offset="38%" stop-color="#F6E7B5"/>
+      <stop offset="49%" stop-color="#B88B48"/><stop offset="61%" stop-color="#E8CE8B"/>
+      <stop offset="73%" stop-color="#88602A"/><stop offset="87%" stop-color="#DABD72"/>
+      <stop offset="100%" stop-color="#A27434"/>
+    </linearGradient>
+    <style>
+      .heading{font:700 44px Arial,sans-serif;letter-spacing:4px;fill:#fff}
+      .label{font:700 28px Arial,sans-serif;letter-spacing:2px;fill:#0A192F}
+      .note{font:22px Arial,sans-serif;fill:#cbd4df}
+      .chip{font:700 20px Arial,sans-serif;fill:#fff}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#0A192F"/>
+  <text x="90" y="90" class="heading">DRIVEX · ORO DIGITAL</text>
+  <text x="90" y="130" class="note">Basado en Metallic Gold #C5A572 · uso digital y mockups</text>
+  <rect x="90" y="190" width="1420" height="150" rx="18" fill="#0B2545"/>
+  <rect x="120" y="220" width="1360" height="90" rx="12" fill="url(#gold-satin)"/>
+  <text x="150" y="278" class="label">01 · ORO SATINADO — RECOMENDADO</text>
+  <rect x="90" y="380" width="1420" height="150" rx="18" fill="#2E2E2E"/>
+  <rect x="120" y="410" width="1360" height="90" rx="12" fill="url(#gold-polished)"/>
+  <text x="150" y="468" class="label">02 · ORO PULIDO — ALTO CONTRASTE</text>
+  <rect x="90" y="570" width="1420" height="150" rx="18" fill="#000000"/>
+  <rect x="120" y="600" width="1360" height="90" rx="12" fill="url(#gold-foil)"/>
+  <text x="150" y="658" class="label">03 · FOIL DIGITAL — REFLEJOS MARCADOS</text>
+  <rect x="90" y="780" width="230" height="55" rx="8" fill="#0B2545"/>
+  <text x="340" y="817" class="chip">NAVY MASTER · #0B2545</text>
+  <rect x="820" y="780" width="230" height="55" rx="8" fill="#2E2E2E"/>
+  <text x="1070" y="817" class="chip">CHARCOAL · #2E2E2E</text>
+</svg>
