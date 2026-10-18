@@ -39,11 +39,11 @@ article, figure, tr, li, .swatch, .safe-area, .version-print figure { break-insi
 /* Portada */
 .cover { page: cover; height: 279mm; overflow: hidden !important; break-before: auto; }
 .cover .cover-grid { display: grid !important; height: 279mm; padding: 26mm 22mm 24mm !important; grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; }
-.cover .cover-logo { width: 56%; }
+.cover .cover-logo { width: 46%; }
 .cover .cover-meta { font-size: 8pt; }
-.cover .cover-photo { width: 38%; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%); }
+.cover .cover-photo { width: 50%; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%); }
 .cover .cover-photo::after { background: linear-gradient(90deg, rgba(17,20,23,.34), transparent 34%); }
-.cover .cover-photo img { object-position: 55% center; }
+.cover .cover-photo img { object-position: 84% center; }
 
 /* Índice */
 .print-toc { break-before: page; }
