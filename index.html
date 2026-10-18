@@ -8,6 +8,7 @@
   <title>Drivex — Manual de marca</title>
   <link rel="icon" href="assets/isotype-gold.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
   <a class="skip-link" href="#slides">Saltar al contenido</a>
@@ -32,7 +33,7 @@
     <nav id="chapterNav"></nav>
     <div class="chapter-index__footer">
       <span>Drivex Transport LLC</span>
-      <a href="assets/drivex-manual-v3.pdf" download>Descargar PDF ↗</a>
+      <a href="assets/drivex-manual-de-marca.pdf" download>Descargar PDF ↗</a>
     </div>
   </aside>
   <div class="scrim" id="scrim" aria-hidden="true"></div>
@@ -55,7 +56,13 @@
       </div>
     </section>
 
-    <section class="slide is-light" id="esencia" data-title="Esencia" aria-label="Esencia de marca">
+    <section class="print-only print-toc" aria-hidden="true">
+      <p class="eyebrow">Manual de marca · V3.1</p>
+      <h2>Contenido</h2>
+      <nav id="printToc"></nav>
+    </section>
+
+    <section class="slide is-light" id="esencia" data-chapter="Identidad" data-title="Esencia" aria-label="Esencia de marca">
       <div class="slide-inner split-heading">
         <div>
           <p class="eyebrow navy">01 · Esencia</p>
@@ -163,7 +170,7 @@
       </div>
     </section>
 
-    <section class="slide is-navy" id="isotipo" data-title="Isotipo" aria-label="Usos del isotipo">
+    <section class="slide is-navy" id="isotipo" data-chapter="Logotipo" data-title="Isotipo" aria-label="Usos del isotipo">
       <div class="slide-inner isotype-layout">
         <div class="section-head">
           <p class="eyebrow">05 · Isotipo</p>
@@ -220,12 +227,18 @@
             <button type="button" data-version="charcoal">Carbón</button>
           </div>
           <p id="versionNote">Lujo / Full Color · #C5A572 en color plano. Piezas premium sobre negro mate o Navy; en impresión, foil dorado.</p>
+          <div class="print-only version-print">
+            <figure data-theme="gold"><div><img src="assets/logo-gold.svg" alt="Logotipo Drivex en oro"></div><figcaption><b>Oro</b>Lujo / Full Color · #C5A572 en color plano. Piezas premium sobre negro mate o Navy; en impresión, foil dorado.</figcaption></figure>
+            <figure data-theme="white"><div><img src="assets/logo-white.svg" alt="Logotipo Drivex en blanco"></div><figcaption><b>Blanco</b>Monocromática blanca · #FFFFFF sobre Navy #0B2545 o negro mate.</figcaption></figure>
+            <figure data-theme="black"><div><img src="assets/logo-black.svg" alt="Logotipo Drivex en negro"></div><figcaption><b>Negro</b>Monocromática oscura · Negro #000000 sobre fondos claros y papelería legal en papel blanco.</figcaption></figure>
+            <figure data-theme="charcoal"><div><img src="assets/logo-charcoal.svg" alt="Logotipo Drivex en carbón"></div><figcaption><b>Carbón</b>Monocromática oscura · Gris Carbón #2E2E2E sobre fondos claros y papelería legal.</figcaption></figure>
+          </div>
         </div>
         <div class="rule-note"><span>Regla</span><p>El dorado no se utiliza sobre blanco ni fondos claros. El contraste también comunica lujo.</p></div>
       </div>
     </section>
 
-    <section class="slide is-navy" id="color" data-title="Color" aria-label="Paleta de color">
+    <section class="slide is-navy" id="color" data-chapter="Color y tipografía" data-title="Color" aria-label="Paleta de color">
       <div class="slide-inner palette-layout">
         <div class="section-head compact">
           <p class="eyebrow">08 · Color</p>
@@ -264,7 +277,7 @@
             <ul class="check-list">
               <li>La muestra Pantone física rige el color impreso; los valores HEX rigen el color en pantalla.</li>
               <li>El foil dorado se iguala contra el muestrario de láminas de la imprenta, con #C5A572 como objetivo visual.</li>
-              <li>Logos en vectores AI, EPS, SVG y PDF. Foil y Spot-UV en capas de tinta directa separadas y nombradas.</li>
+              <li>Logos en vectores AI, SVG y PDF. Foil y Spot-UV en máscaras separadas, alineadas con el arte.</li>
               <li>Aprobar una prueba física antes de cualquier tiraje.</li>
             </ul>
           </div>
@@ -338,16 +351,17 @@
       </div>
     </section>
 
-    <section class="slide photo-slide" id="aplicacion" data-title="Aplicación" aria-label="Aplicación en tarjeta de presentación">
+    <section class="slide photo-slide" id="aplicacion" data-chapter="Impresión" data-title="Aplicación" aria-label="Aplicación en tarjeta de presentación">
       <div class="photo-bg" aria-hidden="true"></div>
       <div class="photo-overlay"></div>
       <div class="slide-inner application-copy">
         <p class="eyebrow">13 · Aplicación</p>
         <h2>La marca,<br><em>en la mano.</em></h2>
+        <img class="print-only application-photo" src="assets/mockups/tarjetas.jpg" alt="Tarjetas de presentación Drivex en negro y dorado, frente y reverso">
         <div class="specs reveal">
           <div><strong>16 pt / 350 g/m²</strong><span>Negro a sangre · laminado Soft-Touch mate</span></div>
-          <div><strong>Foil dorado</strong><span>Estampado en caliente · logotipo</span></div>
-          <div><strong>Spot-UV Gloss</strong><span>Sobre el QR, con base blanca o dorada</span></div>
+          <div><strong>Foil dorado</strong><span>Estampado en caliente · logotipo, nombre e íconos</span></div>
+          <div><strong>Spot-UV Gloss</strong><span>Sobre el QR, con base blanca</span></div>
         </div>
       </div>
     </section>
@@ -395,8 +409,8 @@
           <article>
             <span>05</span><h3>Código QR</h3>
             <dl>
-              <div><dt>Tamaño</dt><dd>2 × 2 cm mínimo · 4 módulos libres alrededor</dd></div>
-              <div><dt>Base</dt><dd>Blanco o foil dorado, con Spot-UV Gloss encima</dd></div>
+              <div><dt>Tamaño</dt><dd>2 × 2 cm · margen blanco de 1.8 mm, lectura verificada</dd></div>
+              <div><dt>Base</dt><dd>Recuadro blanco y marcadores en Navy, con Spot-UV Gloss encima</dd></div>
               <div><dt>Prueba</dt><dd>Escanear la muestra con dos teléfonos distintos</dd></div>
             </dl>
           </article>
@@ -404,8 +418,8 @@
             <span>06</span><h3>Archivos</h3>
             <dl>
               <div><dt>Formato</dt><dd>.AI editable y PDF/X-4 · textos en curvas</dd></div>
-              <div><dt>Color</dt><dd>CMYK · GRACoL 2013 salvo indicación de la imprenta</dd></div>
-              <div><dt>Capas</dt><dd>FOIL_GOLD y SPOT_UV como tintas directas en sobreimpresión</dd></div>
+              <div><dt>Color</dt><dd>CMYK · Coated GRACoL 2006 salvo indicación de la imprenta</dd></div>
+              <div><dt>Acabados</dt><dd>Foil y Spot-UV en páginas de máscara del PDF, alineadas con el arte</dd></div>
             </dl>
           </article>
         </div>
@@ -423,13 +437,13 @@
           <article><span>01</span><h3>Prueba de color</h3><p>En el papel del tiraje. El Navy se compara con el Pantone físico PMS 2767 C: en imprenta manda el Pantone; en pantalla, el HEX #0B2545.</p></article>
           <article><span>02</span><h3>Foil y Spot-UV</h3><p>Muestra física de ambos acabados antes de producir. La lámina de foil se elige del muestrario de la imprenta tomando #C5A572 como referencia visual.</p></article>
           <article><span>03</span><h3>Escaneo del QR</h3><p>Escanear la muestra física con al menos dos teléfonos distintos. Un QR hecho solo de barniz sobre negro no lo lee ninguna cámara.</p></article>
-          <article><span>04</span><h3>Navy sobre negro</h3><p>Revisar sobre la prueba impresa que los elementos en Navy se distinguen del fondo negro.</p></article>
+          <article><span>04</span><h3>Negro y texto blanco</h3><p>Revisar sobre la prueba impresa la cobertura del negro de fondo y que los textos blancos calados se lean sin empastarse.</p></article>
           <article><span>05</span><h3>Aprobación por escrito</h3><p>El cliente aprueba la muestra por escrito antes de producir el tiraje.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="slide is-ivory" id="voz" data-title="Voz" aria-label="Tono de voz">
+    <section class="slide is-ivory" id="voz" data-chapter="Voz y servicio" data-title="Voz" aria-label="Tono de voz">
       <div class="slide-inner voice-layout">
         <div class="section-head">
           <p class="eyebrow navy">16 · Voz</p>
@@ -534,7 +548,7 @@
       </div>
     </section>
 
-    <section class="slide is-dark" id="usos" data-title="Usos incorrectos" aria-label="Usos incorrectos">
+    <section class="slide is-dark" id="usos" data-chapter="Referencia" data-title="Usos incorrectos" aria-label="Usos incorrectos">
       <div class="slide-inner misuse-layout">
         <div class="section-head">
           <p class="eyebrow">21 · Integridad</p>
@@ -634,6 +648,7 @@
           <p class="eyebrow navy">24 · Descargas</p>
           <h2>Los archivos,<br><em>a la mano.</em></h2>
           <p class="type-intro">Logotipo, tipografías y piezas de apoyo listos para usar. Para imprenta y producción, envía siempre los archivos vectoriales: AI, PDF o SVG.</p>
+          <p class="print-only print-note">Todos los archivos se descargan en <a href="https://drivexbrand.vercel.app/#descargas">drivexbrand.vercel.app</a>.</p>
           <a class="download-all" href="assets/descargas/drivex-logo-completo.zip" download>Paquete completo del logotipo <small>ZIP · 1.4 MB</small><span aria-hidden="true">↓</span></a>
         </div>
         <div class="downloads reveal">
@@ -680,7 +695,7 @@
             <div class="dl-card__head"><span>05</span><h3>Manual y mockups</h3></div>
             <p>Para presentaciones y referencia.</p>
             <ul class="dl-links">
-              <li><a href="assets/drivex-manual-v3.pdf" download><b>PDF</b><span>Manual de marca</span><small>434 KB</small><i aria-hidden="true">↓</i></a></li>
+              <li><a href="assets/drivex-manual-de-marca.pdf" download><b>PDF</b><span>Manual de marca</span><small>3.2 MB</small><i aria-hidden="true">↓</i></a></li>
               <li><a href="assets/descargas/drivex-mockups.zip" download><b>ZIP</b><span>Mockups · PNG alta resolución</span><small>17 MB</small><i aria-hidden="true">↓</i></a></li>
             </ul>
           </article>
@@ -708,7 +723,7 @@
         <div class="end-brand reveal"><img src="assets/logo-slogan-gold-white.svg" alt="Drivex — Executive &amp; Private Transportation"></div>
         <h2>Todo viaje empieza<br>con una señal clara.</h2>
         <div class="end-actions">
-          <a class="primary-action" href="assets/drivex-manual-v3.pdf" download>Descargar manual PDF <span>↓</span></a>
+          <a class="primary-action" href="assets/drivex-manual-de-marca.pdf" download>Descargar manual PDF <span>↓</span></a>
           <a href="https://www.drivexgreenville.com" target="_blank" rel="noreferrer">drivexgreenville.com ↗</a>
           <a href="mailto:contact@drivexgreenville.com">contact@drivexgreenville.com</a>
           <span class="end-social">@drivexgreenville</span>

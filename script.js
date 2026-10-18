@@ -27,6 +27,24 @@ slides.forEach((slide, index) => {
 
 const navButtons = [...chapterNav.querySelectorAll('button')];
 
+// Índice del PDF (solo se ve al imprimir). El script que genera el PDF define
+// window.TOC_PAGES con el número de página de cada sección.
+const printToc = document.getElementById('printToc');
+const tocPages = window.TOC_PAGES || {};
+let tocGroup;
+slides.slice(1, -1).forEach((slide, i) => {
+  if (slide.dataset.chapter) {
+    tocGroup = document.createElement('div');
+    tocGroup.className = 'toc-group';
+    tocGroup.innerHTML = `<span>${slide.dataset.chapter}</span>`;
+    printToc.appendChild(tocGroup);
+  }
+  const link = document.createElement('a');
+  link.href = `#${slide.id}`;
+  link.innerHTML = `<span>${pad(i + 1)}</span>${slide.dataset.title}<b>${tocPages[slide.id] || ''}</b>`;
+  tocGroup.appendChild(link);
+});
+
 function updateUI(index) {
   current = index;
   currentEl.textContent = pad(index);

@@ -465,13 +465,8 @@ h1 em, h2 em { color: var(--gold); font-style: italic; font-family: Fraunces, se
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
-@media print {
-  body { overflow: visible; }
-  .chrome, .controls, .progress, .chapter-index, .scrim, .toast { display: none !important; }
-  .slides { height: auto; overflow: visible; }
-  .slide { page-break-after: always; min-height: 100vh; }
-  .reveal { opacity: 1; transform: none; }
-}
+/* Piezas que solo aparecen en el PDF del manual (ver print.css) */
+.print-only { display: none; }
 
 /* Oro digital: deja espacio a la simulación de foil */
 .gold-samples:has(.foil-preview) { gap: 16px; }

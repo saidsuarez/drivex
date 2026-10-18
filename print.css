@@ -1,0 +1,246 @@
+/* Manual en PDF: documento carta vertical generado desde esta misma página.
+   Las páginas son blancas; solo conservan fondo oscuro las piezas donde el fondo
+   es parte de la regla (versiones del logo, isotipo, zona de protección, color, foil). */
+
+@page {
+  size: letter;
+  margin: 18mm 17mm 20mm;
+  @bottom-left { content: "Drivex · Manual de marca"; font: 500 6.5pt Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #8d9198; }
+  @bottom-right { content: counter(page); font: 500 7pt Inter, sans-serif; color: #8d9198; }
+}
+@page cover { margin: 0; @bottom-left { content: ""; } @bottom-right { content: ""; } }
+@page back { margin: 0; @bottom-left { content: ""; } @bottom-right { content: ""; } }
+
+html, body { background: white !important; }
+body { overflow: visible !important; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.chrome, .controls, .progress, .chapter-index, .scrim, .toast, .skip-link, .lightbox,
+.begin, .mockup__open, .segmented, #versionNote, .version-stage, .copy-hint,
+.primary-action, .soundwave, .photo-bg, .photo-overlay, #mockups .end-pattern,
+.dl-links li:has(button) { display: none !important; }
+.print-only { display: block !important; }
+
+.slides { height: auto !important; overflow: visible !important; scroll-snap-type: none !important; }
+.slide { min-height: 0 !important; overflow: visible !important; break-before: page; page-break-after: auto !important; }
+.slide:not(.cover):not(.end-slide) { background: none !important; color: var(--ink) !important; }
+.slide-inner { min-height: 0 !important; width: auto !important; margin: 0 !important; padding: 0 !important; display: block !important; }
+.reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+article, figure, tr, li, .swatch, .safe-area, .version-print figure { break-inside: avoid; }
+
+/* Encabezado de cada sección */
+.slide .eyebrow, .slide .eyebrow.navy { font-size: 7pt; letter-spacing: .2em; margin: 0 0 10px; color: #8b6d3d; }
+.slide:not(.cover):not(.end-slide) h1, .slide:not(.cover):not(.end-slide) h2 { font-size: 30pt; line-height: 1; letter-spacing: -.045em; color: var(--navy); }
+.slide:not(.cover):not(.end-slide) h1 em, .slide:not(.cover):not(.end-slide) h2 em { color: #8b6d3d; }
+.section-head, .section-head.compact { margin: 0 0 22px; }
+.section-head.compact h2 { font-size: 30pt; }
+.slide .body-copy, .slide .type-intro { max-width: 520px; margin: 12px 0 0; font-size: 10pt; line-height: 1.55; color: #555 !important; }
+.slide h3 { break-after: avoid; }
+
+/* Portada */
+.cover { page: cover; height: 279mm; overflow: hidden !important; break-before: auto; }
+.cover .cover-grid { display: grid !important; height: 279mm; padding: 26mm 22mm 24mm !important; grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; }
+.cover .cover-logo { width: 56%; }
+.cover .cover-meta { font-size: 8pt; }
+.cover .cover-photo { width: 38%; clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%); }
+.cover .cover-photo::after { background: linear-gradient(90deg, rgba(17,20,23,.34), transparent 34%); }
+.cover .cover-photo img { object-position: 55% center; }
+
+/* Índice */
+.print-toc { break-before: page; }
+.print-toc h2 { font-size: 30pt; line-height: 1; letter-spacing: -.045em; color: var(--navy); margin: 0 0 26px; }
+.print-toc .eyebrow { font-size: 7pt; letter-spacing: .2em; margin: 0 0 10px; color: #8b6d3d; }
+.print-toc nav { columns: 2; column-gap: 34px; }
+.print-toc .toc-group { break-inside: avoid; margin: 0 0 18px; }
+.print-toc .toc-group > span { display: block; font-size: 7pt; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #8b6d3d; padding-bottom: 6px; border-bottom: 1px solid var(--navy); }
+.print-toc a { display: grid; grid-template-columns: 26px 1fr auto; gap: 8px; padding: 7px 0; border-bottom: 1px solid #dedbd3; text-decoration: none; font-size: 10pt; color: var(--ink); }
+.print-toc a span { font-size: 7pt; color: #8b6d3d; padding-top: 2px; }
+.print-toc a b { font-weight: 400; font-size: 9pt; color: #777; font-variant-numeric: tabular-nums; }
+
+/* 01 · Esencia */
+.statement .lead { font-size: 17pt; margin: 6px 0 26px; }
+.principles h3 { margin: 18px 0 6px; }
+
+/* 02 · Arquitectura */
+.brand-stack { gap: 2px; }
+.brand-level { background: var(--ivory); color: var(--ink); grid-template-columns: 1fr; padding: 16px 20px; }
+.brand-level--master { background: var(--gold); color: var(--deep); }
+.brand-level strong { font-size: 17pt; }
+.brand-level p { font-size: 8.5pt; margin: 6px 0 0; }
+.slide .legal-line { position: static; margin: 22px 0 0; border-top-color: #d6d2c8; color: #777; font-size: 7pt; }
+
+/* 03 · Nomenclatura */
+.doc-stack { gap: 22px; }
+.legal-forms p { font-size: 14pt; }
+.rule-list li { font-size: 9.5pt; }
+
+/* 04 · Sistema de marca */
+.system-cards { grid-template-columns: 1.45fr .8fr 1fr; gap: 8px; margin-top: 6px; }
+.system-card { min-height: 250px; padding: 18px; }
+.system-card:first-child { grid-column: auto; }
+.system-card img { max-height: 110px; }
+.system-card p { display: block; font-size: 8pt; }
+.line-pattern { min-height: 120px; margin: 8px -18px; }
+.system-rule { font-size: 9pt; }
+
+/* 05 · Isotipo */
+.isotype-layout { display: grid !important; grid-template-columns: 210px 1fr; gap: 0 32px; align-items: center; }
+.isotype-layout .section-head, .isotype-layout .legal-line { grid-column: 1 / -1; }
+.isotype-stage { width: 210px; }
+.isotype-uses { border-top-color: #cdc8bd; }
+.isotype-uses li { border-bottom-color: #cdc8bd; font-size: 11.5pt; padding: 12px 0; }
+.isotype-uses span { color: #8b6d3d; }
+
+/* 06 · Construcción */
+.safe-area { background: #111417; max-width: 470px; margin: 4px 0 26px; padding: 13%; }
+.minimums, .minimums--4 { grid-template-columns: repeat(4, 1fr); border-top-color: #cdc8bd; }
+.minimums div, .minimums--4 div, .minimums--4 div:first-child, .minimums--4 div:last-child { border-right: 1px solid #cdc8bd; padding: 14px 14px 14px 0; }
+.minimums--4 div + div { padding-left: 14px; }
+.minimums--4 div:last-child { border-right: 0; }
+.minimums strong { color: #8b6d3d; font-size: 17pt; }
+.minimums span { color: #666; font-size: 8pt; }
+
+/* 07 · Versiones: las cuatro a la vez, cada una sobre su fondo */
+.version-showcase { display: block; }
+.version-print { display: grid !important; grid-template-columns: 1fr 1fr; gap: 10px; }
+.version-print figure { margin: 0; }
+.version-print figure > div { height: 150px; display: grid; place-items: center; padding: 0 12%; background: var(--deep); }
+.version-print figure > div img { width: 100%; }
+.version-print figure[data-theme="white"] > div { background: var(--navy); }
+.version-print figure[data-theme="black"] > div { background: white; box-shadow: inset 0 0 0 1px #d9d6ce; }
+.version-print figure[data-theme="charcoal"] > div { background: var(--ivory); box-shadow: inset 0 0 0 1px #d9d6ce; }
+.version-print figcaption { margin-top: 8px; font-size: 8pt; line-height: 1.5; color: #666; }
+.version-print figcaption b { display: block; font-size: 7pt; letter-spacing: .16em; text-transform: uppercase; color: var(--navy); margin-bottom: 2px; }
+.slide .rule-note { position: static; margin-top: 22px; border-top: 1px solid #cdc8bd; padding-top: 12px; }
+.rule-note span { color: #8b6d3d; }
+.rule-note p { font-size: 9.5pt; }
+
+/* 08 · Color */
+.swatches { grid-template-columns: repeat(5, 1fr); align-items: stretch; gap: 4px; margin-top: 6px; }
+.swatch, .swatch--navy { min-height: 300px !important; padding: 14px; grid-column: auto !important; }
+.swatch--navy { border: 0; }
+.swatch--white { box-shadow: inset 0 0 0 1px #d9d6ce; }
+.swatch span { font-size: 9pt; }
+.swatch strong { font-size: 12pt; }
+.swatch small { font-size: 6.5pt; }
+.swatch em { margin-bottom: auto; }
+
+/* 09 · Uso del color */
+.doc-columns { grid-template-columns: 1fr 1fr; gap: 28px; }
+.check-list li { font-size: 9.5pt; }
+
+/* 10 · Tipografía */
+.type-families { grid-template-columns: 1fr 1fr; }
+.type-family { min-height: 300px; padding: 22px; }
+.type-glyphs { font-size: 70pt; margin: 14px 0; }
+.type-family h3 { font-size: 17pt; }
+.type-family > p:not(.type-glyphs) { font-size: 8.5pt; }
+.type-rule { margin-top: 22px; font-size: 9pt; }
+
+/* 11 · Jerarquía */
+.type-scale article { padding: 12px 110px 12px 0; }
+.scale-display p { font-size: 40pt; }
+.scale-heading p { font-size: 20pt; }
+.scale-body p { font-size: 11pt; }
+.type-usage { grid-template-columns: repeat(3, 1fr); margin-top: 22px; }
+.type-usage p { font-size: 8.5pt; }
+
+/* 12 · Oro digital */
+.gold-samples { margin-top: 6px; }
+.gold-samples article { border-bottom-color: #dedbd3; grid-template-columns: 2fr 30px 1.3fr; }
+.gold-samples article > span { color: #8b6d3d; }
+.gold-samples p { color: #666; font-size: 8.5pt; }
+.gold-samples h3 { font-size: 13pt; }
+.gold-samples .gold-bar, .gold-samples:has(.foil-preview) .gold-bar { height: 52px; }
+.foil-preview { padding: 30px 9%; }
+
+/* 13 · Aplicación */
+.photo-slide .application-copy { color: var(--ink); display: block; }
+.application-photo { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin: 22px 0 0; }
+.specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 2px; background: none; }
+.specs div { background: var(--ivory); backdrop-filter: none; min-width: 0; padding: 14px 16px; }
+.specs strong { color: #8b6d3d; font-size: 11pt; }
+.specs span { color: #555; font-size: 8pt; }
+
+/* 14 · Impresión de tarjetas */
+.print-grid { grid-template-columns: repeat(2, 1fr); gap: 4px; }
+.print-grid article { background: var(--ivory); padding: 16px 18px; }
+.print-grid span { color: #8b6d3d; }
+.print-grid h3 { font-size: 12pt; margin: 8px 0 10px; }
+.print-grid dt { color: #8a8a8a; }
+.print-grid dd { color: #333; font-size: 9pt; }
+
+/* 15 · Antes de imprimir */
+.tech-grid { grid-template-columns: 1fr 1fr; }
+.tech-grid p { font-size: 9pt; }
+
+/* 16 · Voz */
+.voice-columns > div { min-height: 0; padding: 22px; }
+.voice-columns ul { margin-top: 18px; }
+.voice-columns li { font-size: 12pt; padding: 11px 0; }
+
+/* 17 · Redacción */
+.rule-list--compact li { font-size: 9.5pt; }
+.vocab p { font-size: 13pt; }
+.rewrites article { grid-template-columns: .8fr 1.2fr; gap: 20px; font-size: 10pt; }
+
+/* 18 · Mensajes aprobados */
+.brand-line { border-top-color: #dedbd3; }
+.brand-line span, .institutional span, .policies > span { color: #8b6d3d; }
+.brand-line p { font-size: 14pt; color: var(--navy); }
+.institutional p { color: var(--ink); font-size: 12pt; }
+.policies p { color: #555; border-top-color: #dedbd3; font-size: 9.5pt; }
+.policies b { color: var(--ink); }
+
+/* 19 · Silent Ride: la marca conserva su panel Navy */
+.silent-mark { background: var(--navy); padding: 30px 34px; margin: 4px 0 24px; font-size: 92pt; }
+.silent-mark span:last-child { margin-left: 120px; }
+.silent-lead { position: static; max-width: 520px; font-size: 14pt; color: var(--ink); margin: 0 0 18px; }
+.silent-layout blockquote { color: #555; font-size: 11pt; margin: 0 0 22px; }
+.conduct { grid-template-columns: repeat(4, 1fr); border-top-color: #cdc8bd; }
+.conduct span { color: #666; }
+
+/* 20 · Guion */
+.script li { grid-template-columns: 130px 1fr; gap: 16px; }
+.script p { font-size: 10pt; }
+.check-list--tight li { font-size: 9pt; }
+
+/* 21 · Usos incorrectos */
+.misuse-grid { grid-template-columns: 1fr 1fr; gap: 4px; }
+.misuse-grid article { min-height: 0; background: var(--ivory); padding: 16px; }
+.misuse-grid span { color: #a4462f; font-size: 20pt; }
+.misuse-grid p { color: #333; font-size: 10pt; }
+
+/* 22 · Referencia rápida */
+.data-table--light tr { display: table-row; }
+.data-table--light th, .data-table--light td { display: table-cell; }
+.data-table--light tbody th { width: 34%; padding: 10px 14px 10px 0; border-bottom: 1px solid #cdc8bd; }
+.data-table--light td { padding: 10px 0; font-size: 9.5pt; }
+
+/* 23 · Mockups */
+.mockup-grid { grid-template-columns: 1fr 1fr; gap: 14px 10px; }
+.mockup, .mockup--hero { grid-column: auto; grid-row: auto; background: none; overflow: visible; }
+.mockup img, .mockup--hero img { position: static; aspect-ratio: 16 / 9; height: auto; }
+.mockup figcaption { position: static; display: block; background: none; color: #666; padding: 6px 0 0; font-size: 7pt; }
+
+/* 24 · Descargas */
+.downloads-layout .download-all { margin-top: 18px; }
+.download-all small { display: inline; }
+.downloads { grid-template-columns: 1.1fr 1fr 1fr; gap: 4px; margin-top: 4px; }
+.dl-card { padding: 16px 18px; }
+.dl-card--logo { grid-column: 1; grid-row: span 2; }
+.dl-card__preview { grid-template-columns: 1fr auto; padding: 8px 4px 16px; }
+.dl-card__preview img { max-width: 170px; }
+.dl-card__preview img + img { width: 30px; }
+.dl-links a { grid-template-columns: 50px minmax(0, 1fr) 12px; }
+.dl-links a { padding: 8px 0; }
+.dl-links span { font-size: 9pt; }
+.print-note { margin: 16px 0 0; font-size: 9pt; color: #555; }
+.print-note a { color: var(--navy); }
+
+/* Contraportada */
+.end-slide { page: back; height: 279mm; overflow: hidden !important; }
+.end-slide .end-layout { display: grid !important; height: 279mm; padding: 26mm 22mm 22mm !important; grid-template-rows: auto 1fr auto auto; }
+.end-slide .end-pattern { width: 140mm; height: 110mm; }
+.end-slide h2 { font-size: 36pt; }
+.end-actions { flex-direction: row; gap: 28px; }
+.end-legal { flex-direction: row; font-size: 6.5pt; }
