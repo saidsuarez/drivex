@@ -5,12 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#071a31">
   <meta name="description" content="Manual de marca oficial de Drivex: identidad, color, aplicaciones y voz.">
+  <script>
+    // Cargador: solo con JS; si script.js no llega a quitarlo, se retira solo.
+    document.documentElement.classList.add('is-loading');
+    setTimeout(() => document.documentElement.classList.remove('is-loading'), 8000);
+  </script>
   <title>Drivex — Manual de marca</title>
   <link rel="icon" href="assets/isotype-gold.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="print.css" media="print">
 </head>
 <body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <svg class="loader__logo" viewBox="0 0 970.3 203.4" fill="#c5a572">
+      <defs>
+        <clipPath id="loaderClip"><path d="M205.9,112.1c0,24.9-7.3,41.6-31.6,49.6-7.9,2-15.5,3.5-23.9,3.5H38.8c0,0,0-125.8,0-125.8h112.2c8.4.1,16,1.4,23.8,3.5,13.2,4.5,22.5,11.3,27.8,24.3,2,6.4,3.3,12.8,3.3,19.6v25.3ZM166.8,114.3v-23.8c0-4.4-1.3-8.3-3.5-11.9-3.7-4.8-9.2-7.5-15.5-7.5h-71.4c0-.1,0,63.8,0,63.8h72.4c5.5-.2,10.3-2.7,13.7-6.5,3-4.2,4.3-8.8,4.4-14.1Z"/><path d="M344.1,91.8c.4-7.5.5-14.7,0-22.1-.9-10.8-6.8-19.8-16.2-24.9-6.6-3.7-13.8-5.4-21.6-5.4h-100.7c8.6,4.6,17.7,22.5,20,31.7h72.2c6,0,10,5.2,10,10.7.6,6.3-3.8,12-10.5,12l-66.7.2,56.1,60.9,9.5,10.3h46.6s-38.6-37.4-38.6-37.4l-5.5-5.3c6.1-.2,11,0,16.5-.9,15.8-2.8,28.1-13.3,28.9-29.8Z"/><polygon points="392.7 165.2 354 165.2 354.1 138.7 354 39.2 392.7 39.1 392.7 165.2"/><polygon points="530.7 39.2 568.8 39.2 560.7 54.7 523.2 124.6 501.3 165.2 467.1 165.2 422.4 78.6 402.3 39.2 440 39.1 460.7 78 475.3 106.1 484.7 124 489.6 115 503.6 88.9 530.7 39.2"/><polygon points="739.3 70.8 708.9 39.1 578.4 39.1 578.4 70.8 739.3 70.8"/><polygon points="617.9 116.4 617.9 116.4 679 116.4 715 88.7 617.8 88.7 617.8 88.7 578.4 88.7 578.4 116.4 617.9 116.4"/><polygon points="617.8 135.2 578.4 135.2 578.4 165.1 681.2 165.1 720.1 135.4 617.8 135.3 617.8 135.2"/><polygon points="696.9 165.2 739 165.4 931.8 17.3 889.5 17.3 696.9 165.2"/><polygon points="842.9 165.1 895.7 165.1 836.1 102.9 805.7 126.3 842.9 165.1"/><polygon points="722.4 39.4 775.2 39.4 804.8 70.3 774.4 93.6 722.4 39.4"/></clipPath>
+        <clipPath id="loaderCutD"><polygon class="loader__cut-d" points="-100 -50 412.2 -50 21.2 250 -100 250"/></clipPath>
+        <linearGradient id="loaderSheen" x1="0" x2="1">
+          <stop offset="0" stop-color="#f7e9c8" stop-opacity="0"/>
+          <stop offset=".5" stop-color="#f7e9c8" stop-opacity=".75"/>
+          <stop offset="1" stop-color="#f7e9c8" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <g class="loader__d">
+        <path clip-path="url(#loaderCutD)" d="M205.9,112.1c0,24.9-7.3,41.6-31.6,49.6-7.9,2-15.5,3.5-23.9,3.5H38.8c0,0,0-125.8,0-125.8h112.2c8.4.1,16,1.4,23.8,3.5,13.2,4.5,22.5,11.3,27.8,24.3,2,6.4,3.3,12.8,3.3,19.6v25.3ZM166.8,114.3v-23.8c0-4.4-1.3-8.3-3.5-11.9-3.7-4.8-9.2-7.5-15.5-7.5h-71.4c0-.1,0,63.8,0,63.8h72.4c5.5-.2,10.3-2.7,13.7-6.5,3-4.2,4.3-8.8,4.4-14.1Z"/>
+      </g>
+      <g class="loader__x">
+        <polygon points="696.9 165.2 739 165.4 931.8 17.3 889.5 17.3 696.9 165.2"/>
+        <polygon points="842.9 165.1 895.7 165.1 836.1 102.9 805.7 126.3 842.9 165.1"/>
+        <polygon points="775.2 39.4 804.8 70.3 774.4 93.6 765.1 83.9 764.7 79.2 764.0 74.4 762.9 69.5 761.5 64.5 761.3 64.2 761.3 63.9 758.9 58.7 756.0 53.9 752.7 49.7 748.8 45.8 744.5 42.4 739.6 39.4">
+          <animate attributeName="points" to="775.2 39.4 804.8 70.3 774.4 93.6 765.1 83.9 760.6 79.2 756.0 74.4 751.3 69.5 746.5 64.5 746.2 64.2 745.9 63.9 740.9 58.7 736.3 53.9 732.2 49.7 728.6 45.8 725.3 42.4 722.4 39.4" begin="1s" dur=".7s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".45 0 .25 1"/>
+        </polygon>
+      </g>
+      <path class="loader__letter" style="--i:2" d="M344.1,91.8c.4-7.5.5-14.7,0-22.1-.9-10.8-6.8-19.8-16.2-24.9-6.6-3.7-13.8-5.4-21.6-5.4h-100.7c8.6,4.6,17.7,22.5,20,31.7h72.2c6,0,10,5.2,10,10.7.6,6.3-3.8,12-10.5,12l-66.7.2,56.1,60.9,9.5,10.3h46.6s-38.6-37.4-38.6-37.4l-5.5-5.3c6.1-.2,11,0,16.5-.9,15.8-2.8,28.1-13.3,28.9-29.8Z"/>
+      <polygon class="loader__letter" style="--i:0" points="392.7 165.2 354 165.2 354.1 138.7 354 39.2 392.7 39.1 392.7 165.2"/>
+      <polygon class="loader__letter" style="--i:1" points="530.7 39.2 568.8 39.2 560.7 54.7 523.2 124.6 501.3 165.2 467.1 165.2 422.4 78.6 402.3 39.2 440 39.1 460.7 78 475.3 106.1 484.7 124 489.6 115 503.6 88.9 530.7 39.2"/>
+      <g class="loader__letter" style="--i:2"><polygon points="739.3 70.8 708.9 39.1 578.4 39.1 578.4 70.8 739.3 70.8"/><polygon points="617.9 116.4 617.9 116.4 679 116.4 715 88.7 617.8 88.7 617.8 88.7 578.4 88.7 578.4 116.4 617.9 116.4"/><polygon points="617.8 135.2 578.4 135.2 578.4 165.1 681.2 165.1 720.1 135.4 617.8 135.3 617.8 135.2"/></g>
+      <g clip-path="url(#loaderClip)"><rect class="loader__sheen" x="-260" y="0" width="260" height="203.4" fill="url(#loaderSheen)"/></g>
+    </svg>
+  </div>
   <a class="skip-link" href="#slides">Saltar al contenido</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 

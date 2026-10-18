@@ -186,3 +186,18 @@ lightbox.addEventListener('keydown', event => {
 const initialIndex =slides.findIndex(slide => `#${slide.id}` === location.hash);
 if (initialIndex > -1) setTimeout(() => goTo(initialIndex), 60);
 else slides[0].classList.add('in-view');
+
+// Cargador: se retira cuando la página cargó y el logo terminó de armarse.
+const loader = document.getElementById('loader');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const loaderMin = reduceMotion ? 300 : 3500;
+// El morph del brazo de la X es SMIL: sin movimiento, se salta a su forma final.
+if (reduceMotion) loader.querySelector('svg').setCurrentTime(5);
+Promise.all([
+  new Promise(resolve => document.readyState === 'complete' ? resolve() : addEventListener('load', resolve, { once: true })),
+  new Promise(resolve => setTimeout(resolve, Math.max(0, loaderMin - performance.now())))
+]).then(() => {
+  loader.classList.add('is-leaving');
+  document.documentElement.classList.remove('is-loading');
+  loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+});

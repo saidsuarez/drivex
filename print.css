@@ -14,7 +14,7 @@
 html, body { background: white !important; }
 body { overflow: visible !important; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
-.chrome, .controls, .progress, .chapter-index, .scrim, .toast, .skip-link, .lightbox,
+.loader, .chrome, .controls, .progress, .chapter-index, .scrim, .toast, .skip-link, .lightbox,
 .begin, .mockup__open, .segmented, #versionNote, .version-stage, .copy-hint,
 .primary-action, .soundwave, .photo-bg, .photo-overlay, #mockups .end-pattern,
 .dl-links li:has(button) { display: none !important; }

@@ -613,3 +613,27 @@ h1 em, h2 em { color: var(--gold); font-style: italic; font-family: Fraunces, se
   .data-table--light td { padding: 0 0 14px; overflow-wrap: anywhere; }
   .architecture { padding-bottom: 64px; }
 }
+
+/* Cargador: el isotipo DX se abre y deja paso a R-I-V-E hasta formar DRIVEX.
+   La X del isotipo está 550.4 unidades a la izquierda de la X del logo; al inicio
+   D y X se desplazan para centrar el isotipo y luego vuelven a su sitio. */
+.loader { display: none; }
+.is-loading .loader, .loader.is-leaving { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--deep); }
+.loader.is-leaving { opacity: 0; transition: opacity .7s var(--ease); pointer-events: none; }
+.loader__logo { width: min(74vw, 540px); height: auto; overflow: visible; animation: loader-in .8s var(--ease) both; }
+.loader__d { animation: loader-d 1.15s .9s cubic-bezier(.7, 0, .2, 1) both; }
+.loader__x { animation: loader-x 1.15s .9s cubic-bezier(.7, 0, .2, 1) both; }
+/* Los cortes del isotipo se cierran poco a poco, sin fundidos: el recorte de la D
+   se desliza y descubre su esquina; el brazo de la X endereza su curva (morph SMIL
+   en index.html, mismo tiempo y curva de aceleración). */
+.loader__cut-d { animation: loader-cut-d .7s 1s cubic-bezier(.45, 0, .25, 1) both; }
+.loader__letter { animation: loader-letter .7s calc(1.45s + var(--i) * .12s) var(--ease) both; }
+.loader__sheen { animation: loader-sheen 1.1s 2.45s ease-in-out both; }
+@keyframes loader-in { from { opacity: 0; transform: scale(.94); } }
+@keyframes loader-d { from { transform: translateX(275.1px); } }
+@keyframes loader-x { from { transform: translateX(-275.3px); } }
+@keyframes loader-cut-d { to { transform: translateX(80px); } }
+@keyframes loader-letter { from { opacity: 0; transform: translateY(26px); } }
+@keyframes loader-sheen { from { transform: translateX(0); } to { transform: translateX(1240px); } }
+/* La portada espera a que se retire el cargador para hacer su entrada */
+.is-loading .slide.in-view .reveal { opacity: .25; transform: translateY(28px); }
