@@ -1,0 +1,31 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "query", "key": "lang", "value": "es" }],
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/qr",
+      "destination": "/book?utm_source=qr&utm_medium=print&utm_campaign=business_card",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/es/:section(services|standards|fleet|corporate|book|interstate-notice)",
+      "destination": "/es/index.html"
+    },
+    {
+      "source": "/:section(services|standards|fleet|corporate|book|interstate-notice)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+    }
+  ]
+}

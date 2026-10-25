@@ -1,0 +1,54 @@
+{
+  "redirects": [
+    {
+      "source": "/preview-web",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "es"
+        }
+      ],
+      "destination": "/preview-web/es/",
+      "permanent": false
+    },
+    {
+      "source": "/preview-web/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "es"
+        }
+      ],
+      "destination": "/preview-web/es/",
+      "permanent": false
+    },
+    {
+      "source": "/preview-web/qr",
+      "destination": "/preview-web/book?utm_source=qr&utm_medium=print&utm_campaign=business_card",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/preview-web/es/:section(services|standards|fleet|corporate|book|interstate-notice)",
+      "destination": "/preview-web/es/index.html"
+    },
+    {
+      "source": "/preview-web/:section(services|standards|fleet|corporate|book|interstate-notice)",
+      "destination": "/preview-web/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/preview-web/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}
