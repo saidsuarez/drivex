@@ -42,7 +42,7 @@
   ],
   "headers": [
     {
-      "source": "/preview-web/:path*",
+      "source": "/preview-web(.*)",
       "headers": [
         {
           "key": "X-Robots-Tag",
